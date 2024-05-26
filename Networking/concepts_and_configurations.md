@@ -13,7 +13,8 @@ Router - connects two or more separate networks.
 - If it connects 2 networks, it gets 2 IP addresses assigned.
 Assume devices A & B on network N1 and devices C & D on network N2. If B wants to pass a packet to C, how will B know where the router is on the network?
 <t/>Done by configuring systems with a gateway or a route.
-<t/> ### Configuration systems with a gateway/route
+
+### Configuration systems with a gateway/route
 
 
 # Routing
