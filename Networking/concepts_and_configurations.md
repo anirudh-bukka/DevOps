@@ -15,6 +15,20 @@ Assume devices A & B on network N1 and devices C & D on network N2. If B wants t
 <t/>Done by configuring systems with a gateway or a route.
 
 ### Configuration systems with a gateway/route
+- Gateway is like the door of a room (network) to the outside world (internet).
+- The systems need to know where that door is.
+- Run `route` - displays the kernel's routing table.
+    - If the table is empty, System B will not be able to read System C.
+- To configure a gateway on System B of N1 to reach the system on N2:
+    - `ip route add <IP of N2> via <IP of connection of Router with N1 (the door)>`
+    - `route`: this time has routing table populated
+This has to be configured for all the systems and all combinations of sending and receiving messages.
+
+#### Connect router to the internet
+- `ip route add <IP of internet> via <IP of door to N2>`
+Since in real world, there are numerous internet networks, just specify which router to connect to if it is an unknown network:
+- `ip route add default via <IP of door to N2>`
+
 
 
 # Routing
