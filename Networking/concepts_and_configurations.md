@@ -29,6 +29,15 @@ This has to be configured for all the systems and all combinations of sending an
 Since in real world, there are numerous internet networks, just specify which router to connect to if it is an unknown network:
 - `ip route add default via <IP of door to N2>`
 
+## Setting a linux host as a Router
 
+                    |   |           |   |           |   |   
+                    |   |           |   |           |   |
+                    |  eth0       eth0  eth1      eth0  |
+                    |   |           |   |           |   |
+                    | A | --- O --- | B | --- O --- | C |
+                    |   |      1.0  |   |      2.6  |   |
+                    |   |           |   |           |   |
+                       1.5        1.6   2.6        2.5     
 
 # Routing
