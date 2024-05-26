@@ -31,6 +31,7 @@ Since in real world, there are numerous internet networks, just specify which ro
 
 ## Setting a linux host as a Router
 Assume the network structure:
+
                     |   |           |   |           |   |   
                     |   |           |   |           |   |
                     |  eth0       eth0  eth1      eth0  |
@@ -39,5 +40,6 @@ Assume the network structure:
                     |   |      1.0  |   |      2.6  |   |
                     |   |           |   |           |   |
                        1.5        1.6   2.6        2.5     
+
 - `ping 192.168.2.5` - "network is unreachable"
 # Routing
