@@ -59,3 +59,9 @@ Assume the network structure:
     - Modify it:
         - `echo 1 > /proc/sys/net/ipv4/ip_forward`
         - `vi /etc/sysctl.conf` > "net.ipv4.ip_forward = 1"
+
+
+# Key Takeaways
+- The first and essential requirement is physical or virtual interface on the hosts.
+- A gateway can connect a system to the internet.
+- Assigning IP addresses to nodes of an app: `sudo ip addr add <IP Address> dev eth0`
