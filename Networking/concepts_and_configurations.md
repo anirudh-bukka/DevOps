@@ -8,6 +8,7 @@
     - `ip addr add <ip address> <ip link>`
 In this case, messages and packets are sent from one host of the network to another host of the same network via switch.
 
+# Routing
 ## Connection and communication with another network.
 Router - connects two or more separate networks.
 - If it connects 2 networks, it gets 2 IP addresses assigned.
@@ -42,4 +43,19 @@ Assume the network structure:
                        1.5        1.6   2.6        2.5     
 
 - `ping 192.168.2.5` - "network is unreachable"
-# Routing
+- We need to configure such that A knows the door to N2 is through B.
+    - Add a route to access network 2.0 via the gateway eth0 of B: `ip route add 192.186.2.0 via 192.168.1.6` 
+    
+    If we want to send packets to host C from A, host C will have to send back responses to host A.
+    - But host C would face the same issue of not finding host A.
+    - `ip route add 192.168.1.0 via 192.168.2.6`
+
+    On pinging 2.5, we don't get errors, but we also don't get any response back.
+    - This is because in Linux, by default, packets are not forwarded from one interface to the next.
+    - For ex: packets received by B at `eth0` are not forwarded elsewhere through `eth1`.
+    - For security - to prevent communication between public and private network.
+
+- This information about packets being allowed to forward or not is written in `cat /proc/sys/net/ipv4/ip_forward`.
+    - Modify it:
+        - `echo 1 > /proc/sys/net/ipv4/ip_forward`
+        - `vi /etc/sysctl.conf` > "net.ipv4.ip_forward = 1"
