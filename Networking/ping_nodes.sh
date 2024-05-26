@@ -9,7 +9,19 @@
 
 
 # On app01 and app02:
+ssh app01
 sudo ip route add 172.16.239.0/24 via 172.16.238.10
+exit
+
+ssh app02
+sudo ip route add 172.16.239.0/24 via 172.16.238.10
+exit
 
 # On app03 and app04:
+ssh app03
 sudo ip route add 172.16.238.0/24 via 172.16.239.10
+exit
+
+ssh app04
+sudo ip route add 172.16.238.0/24 via 172.16.239.10
+exit
