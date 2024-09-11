@@ -23,6 +23,8 @@ func main() {
 	fmt.Println("a: ", a)
 	fmt.Println("b: ", b)
 
+	// --------------------------------------------------------
+	// Finding type of variables
 	var grade int = 99
 	var message string
 
@@ -31,14 +33,7 @@ func main() {
 
 	fmt.Printf("Variable grade = %v is of the type: %T", grade, grade)
 	fmt.Printf("Variable message = %v is of the type: %v", message, reflect.TypeOf(message))
+
+	// --------------------------------------------------------
+
 }
-
-// func datatypes() {
-// 	var grade int = 99
-// 	var message string
-
-// 	fmt.Scanf("Enter a message: ", &message)
-
-// 	fmt.Printf("Variable grade = %v is of the type: %T", grade, grade)
-// 	fmt.Printf("Variable message = %v is of the type: %v", grade, reflect.TypeOf(message))
-// }
