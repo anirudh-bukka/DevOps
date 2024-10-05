@@ -16,9 +16,9 @@ employee_details:
   gender: male
   age: 24
   address:
-    city: 'edison'
-    state: 'new jersey'
-    country: 'united states'
+    city: edison
+    state: new jersey
+    country: united states
   payslips:
     - month: june
       amount: 1400
