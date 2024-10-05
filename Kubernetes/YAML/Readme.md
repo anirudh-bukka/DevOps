@@ -27,6 +27,19 @@ spec:
 - `spec`: Additional information to kubernetes pertaining to that object.
 
 ### Commands
+- `kubectl run <any-podname> --image=<name_from_repo>`: Creating a new pod.
 - `kubectl create -f pod-definition.yaml`: Kubernetes creates the pod.
 - `kubectl get pods`: Retrieves list of pods
 - `kubectl describe pod myapp-pod`: Detailed description of a pod.
+- `kubectl edit pod redis`: Allows you to edit the pod configuration details.<br>
+#### Example:
+```
+Q. Create a new pod with the name redis and the image redis123. Use a pod-definition YAML file. And yes the image name is wrong!
+
+Ans:
+- Use this command to create a pod definition YAML file: `kubectl run redit --image=redis123`
+- Then: `kubectl create -f` command to create a resource from the manifest file
+```
+- We use kubectl run command with --dry-run=client -o yaml option to create a manifest file: `kubectl run redis --image=redis123 --dry-run=client -o yaml > redis-definition.yaml`
+- After that, using kubectl create -f command to create a resource from the manifest file: `kubectl create -f redis-definition.yaml`
+- Verify the work by running kubectl get command: `kubectl get pods`
