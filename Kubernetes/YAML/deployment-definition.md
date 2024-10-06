@@ -23,3 +23,5 @@ spec:
             - name: httpd-frontend
               image: httpd:2.4-alpine
 ```
+
+Then run: `kubectl create -f own-deployment-definition-1.yaml`
