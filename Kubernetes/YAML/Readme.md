@@ -73,10 +73,12 @@ spec:
 Then run: `kubectl create -f own-deployment-definition-1.yaml`
 
 ##### Rollout, Update and Rollback:
+- `kubectl apply -f <name of the deployment>`: UPDATE
+    - `kubectl set image <name of the deployment> nginx=nginx:1.9.1`: Sets image - but **not recommended**.
 - `kubectl rollout status <name of the deployment>`: To check the status of the deployment.
+- `kubectl rollout history <name of the deployment>`: To check the history of our deployment.
+- `kubectl rollout undo <name of the deployment>`: UNDO Deployment.
     - Example for "name of the deployment": `deployment/app-deployment`
-- 
-
 
 #### Example:
 
