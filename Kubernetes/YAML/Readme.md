@@ -29,9 +29,17 @@ spec:
 ### Commands
 - `kubectl run <any-podname> --image=<name_from_repo>`: Creating a new pod.
 - `kubectl create -f pod-definition.yaml`: Kubernetes creates the pod.
-- `kubectl get pods`: Retrieves list of pods
+- `kubectl get pods`: Retrieves list of pods.
+- `kubectl get all`: To retrieve all objects created.
 - `kubectl describe pod myapp-pod`: Detailed description of a pod.
-- `kubectl edit pod redis`: Allows you to edit the pod configuration details.<br>
+- `kubectl edit pod redis`: Allows you to edit the pod configuration details.
+<br><br>
+- `kubectl delete replicaset <replicaset-name>`: to delete a replicaset.
+    - OR use `kubectl delete -f <file-name>`.
+- `kubectl edit replicaset <replicaset-name>`: to edit a replicaset.
+- `kubectl api-resources | grep replicaset`: to check the apiVersion of replicaset by command .
+- `kubectl explain replicaset | grep VERSION`
+<br>
 #### Example:
 ```
 Q. Create a new pod with the name redis and the image redis123. Use a pod-definition YAML file. And yes the image name is wrong!
