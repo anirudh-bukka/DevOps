@@ -6,6 +6,12 @@ metadata:
     name: voting-app-service
     app: voting-app
 spec:
+  type: NodePort
   containers:
     - ports:
-        
+        port: 80
+        targetPort: 80
+        nodePort: 30004
+  selector:
+    name: voting-app-pod
+    app: voting-app
